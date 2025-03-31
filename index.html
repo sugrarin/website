@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Timur Sugrarin</title>
+    <meta name="title" content="Timur Sugrarin">
+    <meta name="description" content="Personal website of Timur Sugrarin">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tima.ee/">
+    <meta property="og:title" content="Timur Sugrarin">
+    <meta property="og:description" content="Personal website of Timur Sugrarin">
+    <meta property="og:image" content="/assets/me@2x.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tima.ee/">
+    <meta property="twitter:title" content="Timur Sugrarin">
+    <meta property="twitter:description" content="Personal website of Timur Sugrarin">
+    <meta property="twitter:image" content="/assets/me@2x.jpeg">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="manifest" href="/assets/site.webmanifest">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+    <div class="background">
+        <img src="/assets/me@2x.jpeg" alt="Timur Sugrarin">
+    </div>
+
+    <header>
+        <div class="header-content">
+            <h1>Timur Sugrarin</h1>
+            <div class="subtitle">Designer</div>
+        </div>
+        <a href="ru/" class="lang-switch">RU</a>
+    </header>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://t.me/sugrarin" target="_blank" rel="noopener noreferrer">telegram</a>
+            <a href="https://x.com/sugrarin" target="_blank" rel="noopener noreferrer">x.com</a>
+            <a href="https://bsky.app/profile/sugrarin.bsky.social" target="_blank" rel="noopener noreferrer">bluesky</a>
+            <a href="https://github.com/sugrarin" target="_blank" rel="noopener noreferrer">github</a>
+            <a href="#" onclick="return showEmail()" class="email-link">email</a>
+        </div>
+    </footer>
+
+    <script>
+        function showEmail() {
+            const email = 'me@tima.ee';
+            const link = document.createElement('a');
+            link.href = 'mailto:' + email;
+            link.textContent = email;
+            link.className = 'email-link';
+            
+            const container = document.querySelector('.social-links');
+            const oldLink = container.querySelector('.email-link');
+            container.replaceChild(link, oldLink);
+            
+            return false;
+        }
+    </script>
+</body>
+</html> 

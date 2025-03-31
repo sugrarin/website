@@ -1,0 +1,164 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@font-face {
+    font-family: 'Proxima';
+    src: url('proxima-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima';
+    src: url('proxima-bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Proxima', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
+    position: relative;
+    color: white;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Proxima', Times, serif;
+    line-height: 1;
+    letter-spacing: -1%;
+}
+
+.subtitle {
+    font-size: 17px;
+}
+
+.lang-switch {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.lang-switch:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+    row-gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: #ccc;
+} 
