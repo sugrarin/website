@@ -18,6 +18,17 @@ body {
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
+    font-family: 'Proxima', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    background-color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000000;
+    }
 }
 
 ul, ol {
@@ -69,14 +80,6 @@ input, button, textarea, select {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Proxima', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    min-height: 100vh;
-    position: relative;
-    color: white;
-    background-color: #719EDA;
 }
 
 .background {
