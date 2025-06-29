@@ -17,6 +17,14 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "Fixel";
+  font-display: swap;
+  src: url('/assets/fixel-bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -108,7 +116,6 @@ header {
 
 h1 {
     font-size: 24px;
-    font-weight: normal;
     line-height: 1;
     letter-spacing: -1%;
 }
