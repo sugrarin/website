@@ -22,7 +22,7 @@
   font-display: swap;
   src: url('/assets/fixel-bold.woff2') format('woff2');
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 html {
