@@ -9,6 +9,14 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: "Fixel";
+  font-display: swap;
+  src: url('/assets/fixel.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -18,7 +26,7 @@ body {
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "Fixel", "Helvetica Neue", Helvetica, sans-serif;
     min-height: 100vh;
     position: relative;
     color: white;
@@ -100,8 +108,7 @@ header {
 
 h1 {
     font-size: 24px;
-    font-weight: bold;
-    font-family: 'Proxima', Times, serif;
+    font-weight: normal;
     line-height: 1;
     letter-spacing: -1%;
 }
