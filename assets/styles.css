@@ -10,19 +10,17 @@
 }
 
 @font-face {
-  font-family: "Fixel";
-  font-display: swap;
-  src: url('/assets/fixel.woff2') format('woff2');
-  font-style: normal;
-  font-weight: normal;
+    font-family: "Gramatika";
+    src: url("/assets/gramatika.woff") format(woff);
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Fixel";
-  font-display: swap;
-  src: url('/assets/fixel-bold.woff2') format('woff2');
-  font-style: normal;
-  font-weight: bold;
+    font-family: "Gramatika";
+    src: url("/assets/gramatika-bold.woff") format(woff);
+    font-weight: bold;
+    font-style: normal;
 }
 
 html {
@@ -34,7 +32,7 @@ body {
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
-    font-family: "Fixel", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "Gramatika", "Helvetica Neue", Helvetica, sans-serif;
     min-height: 100vh;
     position: relative;
     color: white;
@@ -117,11 +115,12 @@ header {
 h1 {
     font-size: 24px;
     line-height: 1;
-    letter-spacing: -1%;
+    letter-spacing: 4%;
 }
 
 .subtitle {
     font-size: 17px;
+    letter-spacing: 4%;
 }
 
 .lang-switch {
@@ -149,6 +148,7 @@ footer {
 }
 
 .social-links {
+    letter-spacing: 4%;
     display: flex;
     gap: 1.2rem;
     row-gap: 0.5rem;
