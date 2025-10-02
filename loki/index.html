@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Локи</title>
+    <link rel=icon href=/loki/favicon.ico>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #121212;
+            font-family: Arial, sans-serif;
+        }
+        .title-img {
+            width: 96%;
+            height: auto;
+            margin: 2%;
+        }
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        .photo-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .photo-wrapper {
+            width: 80%;
+            margin: 40px auto;
+            transition: transform 0.3s ease;
+        }
+        .photo-wrapper img {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img class="title-img" src="/loki.svg" alt="">
+    <div class="photo-container" id="photoContainer"></div>
+
+    <script>
+        const photos = [
+            'photos/IMG_0375.jpg',
+            'photos/IMG_0578.jpeg',
+            'photos/IMG_1279.jpeg',
+            'photos/IMG_1375.jpeg',
+            'photos/IMG_1939.JPG',
+            'photos/IMG_2076.JPG',
+            'photos/IMG_2283.jpg',
+            'photos/IMG_2931.jpg',
+            'photos/IMG_3129.jpeg',
+            'photos/IMG_3239.jpeg',
+            'photos/IMG_3821.jpeg',
+            'photos/IMG_5529.JPG'
+        ];
+
+        // Функция для перемешивания массива
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Функция для получения случайного угла поворота (5 или 10 градусов, положительный или отрицательный)
+        function getRandomRotation() {
+            const angle = Math.random() < 0.5 ? 2 : 5;
+            return Math.random() < 0.5 ? angle : -angle;
+        }
+
+        // Перемешиваем фотографии
+        const shuffledPhotos = shuffleArray([...photos]);
+
+        // Создаем и добавляем элементы на страницу
+        const container = document.getElementById('photoContainer');
+        shuffledPhotos.forEach(photo => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'photo-wrapper';
+            
+            const img = document.createElement('img');
+            img.src = photo;
+            img.alt = 'Фото';
+            
+            const rotation = getRandomRotation();
+            wrapper.style.transform = `rotate(${rotation}deg)`;
+            
+            wrapper.appendChild(img);
+            container.appendChild(wrapper);
+        });
+    </script>
+</body>
+</html>
