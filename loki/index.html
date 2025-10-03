@@ -45,22 +45,21 @@
 <body>
     <img class="title-img emerge" src="loki.svg" alt="">
     <div class="photo-container" id="photoContainer"></div>
-    <a href=""></a>
 
     <script>
         const photos = [
-            'photos/IMG_0375.jpg',
-            'photos/IMG_0578.jpeg',
-            'photos/IMG_1279.jpeg',
-            'photos/IMG_1375.jpeg',
-            'photos/IMG_1939.JPG',
-            'photos/IMG_2076.JPG',
-            'photos/IMG_2283.jpg',
-            'photos/IMG_2931.jpg',
-            'photos/IMG_3129.jpeg',
-            'photos/IMG_3239.jpeg',
-            'photos/IMG_3821.jpeg',
-            'photos/IMG_5529.JPG'
+            'IMG_0375',
+            'IMG_0578',
+            'IMG_1279',
+            'IMG_1375',
+            'IMG_1939',
+            'IMG_2076',
+            'IMG_2283',
+            'IMG_2931',
+            'IMG_3129',
+            'IMG_3239',
+            'IMG_3821',
+            'IMG_5529'
         ];
 
         // Функция для перемешивания массива
@@ -88,8 +87,11 @@
             wrapper.className = 'photo-wrapper emerge';
             
             const img = document.createElement('img');
-            img.src = photo;
+            img.src = `photos/${photo}-800.jpg`; // Default src
+            img.srcset = `photos/${photo}-800.jpg 800w, photos/${photo}-1600.jpg 1600w`;
+            img.sizes = '(max-width: 800px) 800px, 1600px';
             img.alt = 'Фото';
+            img.loading = 'lazy';
             
             const rotation = getRandomRotation();
             wrapper.style.transform = `rotate(${rotation}deg)`;
